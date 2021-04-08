@@ -12,21 +12,32 @@ const RecetasProvider = (props) => {
         categoria: ''
     });
 
+    const [ consultar, guardarConsultar ] = useState(false);
+
     const { ingrediente, categoria } = busqueda;
 
     useEffect(() => {
-        const obtenerRecetas = async() => {
-            const url= `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingrediente}&c=${categoria}`;
-            const recetas = await axios.get(url)
-            guardarRecetas(recetas.data.drinks)
+
+        if(consultar) {
+
+            const obtenerRecetas = async() => {
+                const url= `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingrediente}&c=${categoria}`;
+                const recetas = await axios.get(url)
+                console.log(recetas.data.drinks)
+                guardarRecetas(recetas.data.drinks)
+            }
+            obtenerRecetas();
+
         }
-        obtenerRecetas();
     }, [busqueda])
 
             return(
                 <RecetasContext.Provider
                     value={{
-                        buscarRecetas                    }}
+                        recetas,
+                        buscarRecetas,
+                        guardarConsultar               
+                    }}
                 >
                     {props.children}
                 </RecetasContext.Provider>

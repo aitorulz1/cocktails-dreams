@@ -13,7 +13,7 @@ export default function Formulario() {
     const [ error, guardarError ] = useState(false)
 
     const { categorias } = useContext(CategoriasContext);
-    const { buscarRecetas } = useContext(RecetasContext);
+    const { buscarRecetas, guardarConsultar } = useContext(RecetasContext);
 
     const { nombre, categoria } = busqueda;
 
@@ -33,6 +33,8 @@ export default function Formulario() {
         }
 
         guardarError(false);
+
+        guardarConsultar(true)
 
         buscarRecetas(busqueda)
     }
@@ -58,10 +60,8 @@ export default function Formulario() {
                 >
                     <option value=''>-- Select By Category --</option>
                     {categorias.map(categoria => (
-                        <option 
-                            key={categoria.strCategory} 
-                            value={categoria.strCategory}>
-                                {categoria.strCategory}
+                        <option   key={categoria.strCategory}  value={categoria.strCategory}>
+                            {categoria.strCategory}
                         </option>
                     ))}
                 </select>
