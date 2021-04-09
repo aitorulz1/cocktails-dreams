@@ -1,0 +1,9 @@
+.header-container {
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+
+.header-container img {
+    width: 150px;
+}

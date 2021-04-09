@@ -27,7 +27,8 @@ const DetailsProvider = (props) => {
         <DetailsContext.Provider
             value={{
                 details,
-                guardarIdReceta
+                guardarIdReceta,
+                guardarDetails
             }}
         >
             {props.children}

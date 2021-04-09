@@ -1,0 +1,62 @@
+.cover-background {
+    background: rgb(255,255,255);
+    background: linear-gradient(36deg, rgba(255,255,255,1) 0%, rgba(255,244,229,1) 100%);  
+    width: 100%;
+    position: relative;
+    display: table;
+    min-height: 100vh;         
+}
+
+.cover-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 5% 0% 0% 0%;
+    width: 100%;
+    max-width: 1200px;
+
+    text-align: center;
+}
+
+.title-container {
+    text-align: center;
+    padding: 0% 0% 5% 0%;
+}
+
+.title-container img {
+    width: 400px;
+}
+
+
+
+
+
+
+
+.bottom-container {
+    width: 100%;
+    display: table;
+    position: relative;
+    bottom: 0;
+}
+
+.awards-left-container {
+    float: left;
+    width: 33.3%;
+}
+
+.award {
+    float: left;
+    width: 40%;
+    position: relative;
+    bottom: 0;
+}
+
+.glass-container {
+    float: left;
+    width: 33.3%;
+}
+
+.awards-right-container {
+    float: left;
+    width: 33.3%;
+}
