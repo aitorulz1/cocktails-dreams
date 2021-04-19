@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Cover.css';
 
-import title from '../../assets/images/title.png';
+import title from '../../assets/images/thegentlemen.png';
 
 import glass from '../../assets/images/glass.png';
 
@@ -24,6 +24,7 @@ export default function Cover({removeCover}) {
             
             <div className="title-container">
                 <img src={title} />
+                <div className="cocktail">cocktail</div>
             </div>
 
             <div className="text-container">
@@ -61,11 +62,11 @@ export default function Cover({removeCover}) {
          
                 <div className="awards-right-container">
                 
-                    <div className="award">
+                    <div className="award-right">
                         <img src={award03} />
                     </div>
                     
-                    <div className="award">
+                    <div className="award-right">
                         <img src={award04} />
                     </div>
                 

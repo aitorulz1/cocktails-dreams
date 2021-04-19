@@ -5,6 +5,8 @@ import {DetailsContext} from '../../context/DetailsContext';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 
+import './Receta.css';
+
 
 
 function getModelStyle() {
@@ -21,16 +23,18 @@ function getModelStyle() {
 const useStyles = makeStyles(theme => ({
     paper: {
         position: 'absolute',
-        width: 600,
+        width: 'auto',
+        minWidth: 450,
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 3, 4),
+        borderRadius: 15,
     },
 }));
 
 
 
-export default function Receta({receta}) {
+export default function Receta({ receta, par }) {
 
     const [ modalStyle ] = useState(getModelStyle);
     const [ open, setOpen ] = useState(false);
@@ -45,7 +49,9 @@ export default function Receta({receta}) {
         setOpen(false)
     }
 
-    const {idDrink, strDrink, strDrinkThumb } = receta;
+    console.log(receta)
+
+    const { idDrink, strDrink, strDrinkThumb } = receta;
 
     const { details, guardarIdReceta, guardarDetails } = useContext(DetailsContext);
 
@@ -66,18 +72,19 @@ export default function Receta({receta}) {
     }
 
     return (
-        <div>
+        <div className='single'>
             <h1>{strDrink}</h1>
             <img src={strDrinkThumb} />
+            
             <button
                 type='button'
-                className='vermas'
+                className={par ? 'vermas' : 'vermass'}
                 onClick={() => {
                     guardarIdReceta(idDrink);
                     handleOpen();
                 }}
             >
-                Ver Receta
+                Recipe
             </button>
 
             <Modal
@@ -89,7 +96,7 @@ export default function Receta({receta}) {
                 }}
             >
 
-            
+            <div className='modal-container'>
                 <div style={modalStyle} className={classes.paper}>
 
                     <h1>{details.strDrink}</h1>
@@ -102,6 +109,7 @@ export default function Receta({receta}) {
                     <img src={details.strDrinkThumb} />
 
                 </div>
+            </div>
             
             
             </Modal>

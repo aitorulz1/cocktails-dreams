@@ -1,3 +1,12 @@
+.cocktail {
+    font-family: ui-monospace;
+    font-size: 24px;
+    padding-top: 15px;
+    background: -webkit-linear-gradient(#9b5200, #d39504);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header-container {
     width: 100%;
     display: table;
@@ -5,5 +14,6 @@
 }
 
 .header-container img {
-    width: 150px;
+    width: 350px;
+    padding: 5% 0% 20px 0%;
 }

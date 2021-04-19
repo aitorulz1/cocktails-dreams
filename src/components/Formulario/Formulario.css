@@ -1,0 +1,59 @@
+.form-container {
+    position: relative;
+    margin: 0 auto;
+    width: 560px;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    padding-top: 7.5%;
+}
+
+input.nombre {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 7.5%;
+    display: table;
+    border: none;
+    background: #fdf9f1;
+    border-bottom: 1px solid #d5a252;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    color: #000;
+    
+}
+
+select.categorias {
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 7.5%;
+    display: table;
+    border: none;
+    background: #fcf8ee;
+    border-bottom: 1px solid #d5a252;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    color: #000;
+}
+
+input.boton-buscar{
+    box-shadow: inset 0px 34px 0px -15px #383838;
+    background-color: #050505;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #d5a252;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 9px 23px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #7a2a1d;
+    margin: 7.5% 0% 7.5% 0%;
+    width: 360px;
+}

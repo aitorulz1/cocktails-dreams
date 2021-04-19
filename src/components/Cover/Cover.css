@@ -1,6 +1,6 @@
 .cover-background {
     background: rgb(255,255,255);
-    background: linear-gradient(36deg, rgba(255,255,255,1) 0%, rgba(255,244,229,1) 100%);  
+    background: linear-gradient(36deg, rgba(255,255,255,1) 0%, rgb(251 245 231) 100%);    
     width: 100%;
     position: relative;
     display: table;
@@ -11,7 +11,7 @@
     position: relative;
     margin: 0 auto;
     padding: 5% 0% 0% 0%;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
 
     text-align: center;
@@ -19,7 +19,7 @@
 
 .title-container {
     text-align: center;
-    padding: 0% 0% 5% 0%;
+    padding: 0% 0% 7.5% 0%;
 }
 
 .title-container img {
@@ -36,12 +36,29 @@
     width: 100%;
     display: table;
     position: relative;
-    bottom: 0;
+}
+
+.button-cover{
+    box-shadow:inset 0px 34px 0px -15px #383838;
+	background-color:#050505;
+    border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+    margin: 5% 0% 7.5% 0%;
+    width: 25%;
 }
 
 .awards-left-container {
     float: left;
     width: 33.3%;
+    padding-top: 10%;
 }
 
 .award {
@@ -51,12 +68,39 @@
     bottom: 0;
 }
 
+.award img {
+    width: 110px;
+}
+
+
 .glass-container {
     float: left;
     width: 33.3%;
 }
 
+
+
 .awards-right-container {
     float: left;
     width: 33.3%;
+    padding-top: 10%;
+}
+
+.award-right {
+    float: right;
+    width: 40%;
+    position: relative;
+    bottom: 0;
+}
+
+.award-right img {
+    width: 110px;
+}
+
+.text-container {
+    line-height: 2.5;
+    letter-spacing: 1px;
+    font-family: serif;
+    font-size: 14px;
+    padding-bottom: 2.5%;
 }

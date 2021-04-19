@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { CategoriasContext } from '../../context/CategoriasContext';
 import { RecetasContext } from '../../context/RecetasContext';
 
+import './Formulario.css';
+
 export default function Formulario() {
 
 
@@ -40,7 +42,7 @@ export default function Formulario() {
     }
 
     return (
-        <div>
+        <div className="form-container">
             <form
                 onSubmit={onSubmit}
             >
@@ -49,7 +51,7 @@ export default function Formulario() {
                     className='nombre'
                     type='text'
                     name='nombre'
-                    placeholder='Buscar bebidas'
+                    placeholder='Any Alcoholic Drink'
                     onChange={onChange}
                 />
                
