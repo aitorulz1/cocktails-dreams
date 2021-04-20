@@ -1,5 +1,6 @@
 .listado-container {
     margin: 0 auto;
     position: relative;
-    width: 1200px;
+    width: 95%;
+    max-width: 1200px;
 }

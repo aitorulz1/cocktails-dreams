@@ -4,7 +4,7 @@ import { RecetasContext } from '../../context/RecetasContext';
 
 import './Formulario.css';
 
-export default function Formulario() {
+export default function Formulario({ showButton }) {
 
 
     const [ busqueda, guardarBusqueda ] = useState({
@@ -30,9 +30,14 @@ export default function Formulario() {
         e.preventDefault()
 
         if(nombre.trim() === '' || categoria.trim() === '') {
-            guardarError(true);
+            guardarError(true)
+            setTimeout(() => {
+                guardarError(false);
+            }, 3000)
             return;
         }
+
+        showButton(true)
 
         guardarError(false);
 
@@ -41,12 +46,18 @@ export default function Formulario() {
         buscarRecetas(busqueda)
     }
 
+    
+
     return (
         <div className="form-container">
+
+
             <form
                 onSubmit={onSubmit}
             >
 
+            {error ? <div className="warning">You need to set a Combination</div> : null}
+            
                 <input
                     className='nombre'
                     type='text'
@@ -76,5 +87,7 @@ export default function Formulario() {
 
             </form>
         </div>
+
+    
     )
 }

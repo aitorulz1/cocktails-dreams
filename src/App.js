@@ -14,6 +14,13 @@ function App() {
 
   const [ cover, removeCover ] = useState(true)
 
+  const [ button, showButton ] = useState(false)
+
+
+  const scrollTop = () =>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+
   return (
     <CategoriasProvider>
       <RecetasProvider>
@@ -31,9 +38,22 @@ function App() {
             
               <Header />
 
-              <Formulario />
+              <Formulario 
+                showButton={showButton}
+              />
 
               <ListadoRecetas />
+
+              
+                <div className="scrollTop">
+                  { button ?
+                  <button
+                     className='to-top'
+                     onClick={scrollTop} 
+                  >Go To Top</button>
+                  : null
+                  }
+                </div>
             
             </div>
             }

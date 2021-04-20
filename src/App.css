@@ -1,8 +1,19 @@
 .page-container {
-    background: linear-gradient(36deg, rgba(255,255,255,1) 0%, rgb(251 245 231) 100%);
+    /*background: linear-gradient(36deg, rgba(255,255,255,1) 0%, rgb(251 245 231) 100%);*/
+    background: linear-gradient(90deg, rgb(37 37 37) 0%, rgb(0 0 0) 100%);
     width: 100%;
     position: relative;
-    display: table;
     color: #d5a252;
     height: 100vh;
+    display: table;
+}
+
+button.to-top{
+    position: fixed;
+    right: 5%;
+    bottom: 1%;
+    font-weight: 900;
+    background: #c39044;
+    padding: 30px 5px;
+    border-radius: 62px;
 }
